@@ -1,10 +1,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Specular-Designs/', // Set the base path to match your repository name
+  base: '/Specular-Designs/', // Ensures GitHub Pages paths work
   build: {
-    outDir: 'dist', // Ensure the output directory is 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      },
+    },
   },
 });
