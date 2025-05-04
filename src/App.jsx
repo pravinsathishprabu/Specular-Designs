@@ -12,8 +12,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 function App() {
   return (
     <Router basename="/Specular-Designs">
-      <Navbar /> {/* Ensure Navbar is inside Router so navigation works */}
-      
+      <Navbar />      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
