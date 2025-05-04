@@ -1,11 +1,9 @@
 import { useState } from 'react';
 import logo from '../assets/SPECULAR_LOGO.png';
-import Navbar from './nav';
 
 function Home() {
   return (
     <>
-      <Navbar />
       <div className="row p-4">
         {/* Logo Section */}
         <div className="col-lg-6 col-md-12 p-4 text-center">

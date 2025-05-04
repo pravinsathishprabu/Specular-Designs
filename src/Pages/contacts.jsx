@@ -1,11 +1,9 @@
 import React from 'react';
-import Navbar from './nav';
 import welcome from '../assets/welcome.png';
 
 const Contacts = () => {
   return (
     <>
-      <Navbar />
       <div className="container py-4">
         <div className="row align-items-center">
           {/* Image Section */}

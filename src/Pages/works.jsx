@@ -17,8 +17,6 @@ import img14 from '../assets/Projects/14.jfif'
 import img15 from '../assets/Projects/15.jfif'
 import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
 
-import Navbar from './nav.jsx';
-
 const Work = () => {
 
   useEffect(() => {
@@ -34,7 +32,6 @@ const Work = () => {
 
   return (
     <>
-    <Navbar />
 <div className='projects'>
       <div className='row p-4'>
         <div className='col-md-6 d-flex justify-content-center'>

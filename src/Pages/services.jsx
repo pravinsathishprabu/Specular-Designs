@@ -3,7 +3,6 @@ import img1 from '../assets/Interior.jpg'
 import img2 from '../assets/Exterior.jpg'
 import img3 from '../assets/Architecture design.jpg'
 import img4 from '../assets/urban planning.jpg'
-import Navbar from './nav'
 
 const Services = () => {
   useEffect(() => {
@@ -21,7 +20,6 @@ const Services = () => {
 
   return (
     <>
-      <Navbar />
       <div className='p-4'>
         <h1 className='text-center'>Our Services</h1>
         <p className='text-center'>We offer a variety of services to meet your needs.</p>
