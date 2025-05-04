@@ -1,0 +1,195 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensures the navbar stays on top of other elements */
+  border-bottom: 1px solid black;
+}
+.home_logo{
+  height: 80vh;
+  width: 80vh;
+}
+/* .navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; 
+} */
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.row {
+  margin: 0; /* Remove default row margin to prevent overflow */
+}
+
+.container, .container-fluid {
+  max-width: 100%; /* Ensure containers don't exceed screen width */
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.text-start, .text-center {
+  word-wrap: break-word; /* Break long words to prevent overflow */
+  overflow-wrap: break-word;
+}
+
+.project_img{
+  width: 100%;
+  margin-top:10px;
+  height: 90vh;
+}
+.subtext{
+  text-align: center;
+}
+.social-icons {
+  position: fixed;
+  top: 50%;
+  right: 0; 
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1000;
+}
+
+.social-icons i {
+  padding: 10px;
+  border-radius: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 30px;
+}
+
+.social-icons i:hover {
+  border-radius: 100px;
+  background-color: lightgrey;
+  font-size: 35px;
+}
+.projects{
+  background-color: whitesmoke;
+  /* color:white */
+}
+.typing-container h4 {
+  font-family: monospace;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 2s steps(35, end) forwards;
+}
+
+.text-primary {
+  color: #007bff; /* Or your brand's primary color */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+.form-label{
+  font-weight: bold;
+}
+.design{
+  width:100%;
+  max-height:70vh;
+  background-position: cover;
+}
+.form-label{
+  float: left !important;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Ensure no horizontal scrolling on mobile */
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .home_logo {
+    height: 60vh; /* Adjusted height for smaller screens */
+    width: 60vh; /* Adjusted width for smaller screens */
+  }
+
+  .navbar {
+    font-size: 14px; /* Reduce font size for navbar links */
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  .navbar-brand {
+    font-size: 16px; /* Adjust brand font size */
+  }
+
+  .typing-container h4 {
+    font-size: 1.2rem; /* Reduce font size for typing effect */
+    text-align: center; /* Center-align text for better readability */
+  }
+
+  .project_img {
+    height: auto; /* Allow images to scale dynamically */
+    margin-top: 20px; /* Add spacing for better layout */
+  }
+
+  .vh-80 {
+    height: auto; /* Adjust height for better fit on smaller screens */
+  }
+
+  .p-4 {
+    padding: 1rem !important; /* Reduce padding for smaller screens */
+  }
+
+  .text-start {
+    text-align: center !important; /* Center-align text for mobile view */
+    word-wrap: break-word; /* Prevent text overflow */
+    overflow-wrap: break-word;
+  }
+
+  .btn {
+    width: 100%; /* Make buttons full-width for better usability */
+    font-size: 14px; /* Adjust button font size */
+  }
+
+  .form-label {
+    float: none !important; /* Remove float for better alignment */
+    text-align: left; /* Align labels to the left */
+  }
+
+  .form-control {
+    font-size: 14px; /* Adjust input font size */
+  }
+
+  .row {
+    margin: 0 !important; /* Prevent row margin from causing overflow */
+  }
+  iframe{
+    width: 100%;
+    height: 100%;
+  }
+  .subtext{
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
