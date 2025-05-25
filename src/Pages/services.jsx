@@ -11,12 +11,11 @@ const Services = () => {
       <h2 className="text-center text-info">Our Services</h2>
       <p className="text-center">We offer a variety of services to meet your needs.</p>
       <hr />
-
       <div
         id="carouselExample"
         className="carousel slide mt-4"
-         data-bs-ride="carousel"
-        // data-bs-interval="3000"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
       >
         <div className="carousel-inner">
           <div className="carousel-item active">

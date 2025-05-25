@@ -17,7 +17,7 @@ function Home() {
 
         {/* Welcome Text Section */}
         <div className="col-lg-6 col-md-12 vh-80 d-flex justify-content-center align-items-center">
-          <div className="p-4 box">
+          <div className="box">
             <div className="typing-container">
               <h4>
                 WELCOME TO <span className="text-primary">SPECULAR DESIGN STUDIO</span>

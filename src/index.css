@@ -198,10 +198,18 @@ body {
   .subtext{
     font-size: 14px; /* Adjust font size for smaller screens */
   }
+  .box{
+    padding: 80px
+  }
+  .carousel-item{
+    top:50%;
+    position: fixed;
+    left: 0;
+  }
 }
 .social_contact{
   position: fixed;
-  top: 50%;
+  top: 30%;
   right: 0;
   border: 1px solid black; 
   transform: translateY(-50%);
@@ -245,4 +253,7 @@ body {
   border-bottom-left-radius: 100px;
   border-top-left-radius: 100px;
   border:2px solid black;
+}
+.box{
+  padding: 20px;
 }
