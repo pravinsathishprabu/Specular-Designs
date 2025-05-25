@@ -134,6 +134,9 @@ body {
   .social-icons {
     display: none;
   }
+  .social_contact_2{
+    border-bottom:1px double black;
+  }
   .social_contact_2 i {
   margin: 5px;
   padding: 10px;
