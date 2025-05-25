@@ -1,24 +1,81 @@
-import React from 'react';
+import {React,useState} from 'react';
 import welcome from '../assets/welcome.png';
+import emailjs from '@emailjs/browser';
+
+//import contact from '../assets/cover.jpg';
+
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+
 
 const Contacts = () => {
+
+  const sendEmail = async (formData) => {
+  try {
+    const result = await emailjs.send(
+      'service_t9aetun',
+      'template_4ni6utt',
+      {
+        name: formData.name,
+        email: formData.email,
+        mobile: formData.mobile,
+        message: formData.message,
+      },
+      'user_7dsS6FK8hPcdBOPUro9LT'
+    );
+    console.log('Email sent:', result.text);
+
+
+    return true;
+  } catch (error) {
+    console.error('Email send failed:', error);
+    console.log(formData);
+    return false;
+  }
+};
+
+  const [formData, setFormData] = useState({ name: '', email: '', mobile:'', message: '' });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const success = await sendEmail(formData);
+    if (success) {
+      alert('Message sent!');
+      setFormData({ name: '', email: '', mobile:'', message: '' });
+    } else {
+      alert('Failed to send message.');
+    }
+  };
+
   return (
     <>
       <div className="container py-4">
         <div className="row align-items-center">
           {/* Image Section */}
           <div className="col-lg-6 col-md-12 text-center mb-4 d-none d-md-block">
-            <img
-              src={welcome}
-              alt="Welcome"
-              className="img-fluid col-md-8"
-              style={{ borderRadius: '10px', maxWidth: '100%' }}
+            <DotLottieReact
+              src="https://lottie.host/1628fdd1-58f7-469b-bb16-9395ed97a4ca/FFODugSrOO.json"
+              loop
+              autoplay
             />
-          </div>
+             <div className='social_contact_2'>
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-instagram text-danger" />
+                </a>
+                <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-linkedin text-info" />
+                </a>
+                <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-youtube text-danger" />
+                </a>
+            </div>
+        </div>
 
           {/* Form Section */}
           <div className="col-lg-6 col-md-12">
-            <form className="p-4">
+            <form className="p-4" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
                 <i class="bi bi-person-fill"></i> Name
@@ -27,6 +84,8 @@ const Contacts = () => {
                   type="text"
                   className="form-control"
                   id="name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="Enter your name"
                   required
                 />
@@ -40,6 +99,8 @@ const Contacts = () => {
                   type="email"
                   className="form-control"
                   id="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="Enter your email"
                   required
                 />
@@ -53,6 +114,8 @@ const Contacts = () => {
                   type="text"
                   className="form-control"
                   id="mobile"
+                  value={formData.mobile}
+                  onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
                   placeholder="Enter your mobile number"
                   required
                 />
@@ -65,6 +128,8 @@ const Contacts = () => {
                 <textarea
                   className="form-control"
                   id="message"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}  
                   rows="5"
                   placeholder="Write your message here..."
                   required
@@ -76,7 +141,10 @@ const Contacts = () => {
                   Send Message
                 </button>
               </div>
+
             </form>
+           
+          
           </div>
         </div>
       </div>

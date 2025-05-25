@@ -7,8 +7,8 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg bg-info">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          <img src={logo} alt="Logo" width="50" height="40" className="d-inline-block align-text-top" />
-          <b className="text-white p-1">SPECULAR DESIGN</b>
+          <img src={logo} alt="Logo" width="50" height="40" className="bg-light d-inline-block align-text-top" />
+          <b className="text-white p-1 mt-2 border">SPECULAR DESIGN</b>
         </a>
         <button
           className="navbar-toggler"

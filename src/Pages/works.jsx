@@ -1,6 +1,3 @@
-import { useEffect } from 'react';
-import { Carousel } from 'bootstrap'; // ES6 import
-import logo from '../assets/SPECULAR_LOGO.png';
 import img1 from '../assets/Projects/1.jfif';
 import img2 from '../assets/Projects/2.jfif';
 import img3 from '../assets/Projects/3.jfif';
@@ -17,27 +14,15 @@ import img13 from '../assets/Projects/13.jfif';
 import img14 from '../assets/Projects/14.jfif';
 import img15 from '../assets/Projects/15.jfif';
 
+
 const Work = () => {
-  useEffect(() => {
-    const carousel = document.querySelector('#carouselExample');
-    if (carousel && window.bootstrap?.Carousel) {
-      const instance = new window.bootstrap.Carousel(carousel, {
-        interval: 2000,
-        ride: 'carousel',
-        pause: false,
-      });
-  
-      return () => instance.dispose();
-    } else {
-      console.error('Bootstrap is not loaded properly.');
-    }
-  }, []);
+
   return (
     <>
       <div className='projects'>
         <div className='row p-4'>
           <div className='col-md-6 d-flex justify-content-center'>
-            <div className="carousel slide" id="carouselExample" data-bs-ride="carousel" data-bs-interval="2000" data-bs-pause="false">
+            <div className="carousel slide" id="carouselExample" data-bs-ride="carousel" data-bs-interval="3000">
               <div className="carousel-inner">
                 {[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15].map((img, idx) => (
                   <div key={idx} className={`carousel-item ${idx === 0 ? 'active' : ''}`}>
@@ -45,6 +30,24 @@ const Work = () => {
                   </div>
                 ))}
               </div>
+              <button
+                className="carousel-control-prev btn btn-primary"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button
+                className="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+              </button>
             </div>
           </div>
 
@@ -53,9 +56,16 @@ const Work = () => {
             <i className='subtext'>-ELEVATING THE DIVINE THROUGH ARCHITECTURE</i>
             <br /><br />
             <center>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/tY7yvwqxHsY?si=n7w8jeNfaGAeFS3H" title="YouTube video player"
-                frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/tY7yvwqxHsY?si=n7w8jeNfaGAeFS3H"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
             </center>
             <br />
             <table className="table table-info table-striped">
@@ -76,7 +86,21 @@ const Work = () => {
             </table>
           </div>
         </div>
+        <div className="social-icons">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-instagram text-danger" />
+        </a>
+        <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-linkedin text-info" />
+        </a>
+        <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-youtube text-danger" />
+        </a>
       </div>
+      </div> 
     </>
   );
 };

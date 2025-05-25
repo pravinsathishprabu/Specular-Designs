@@ -41,7 +41,7 @@ body {
 .project_img{
   width: 100%;
   margin-top:10px;
-  height: 90vh;
+  height: 80vh;
 }
 .subtext{
   text-align: center;
@@ -192,4 +192,39 @@ body {
   .subtext{
     font-size: 14px; /* Adjust font size for smaller screens */
   }
+}
+.social_contact{
+  position: fixed;
+  top: 50%;
+  right: 0;
+  border: 1px solid black; 
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.social_contact i {
+  padding: 10px;
+  border-radius: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 30px;
+}
+.social_contact i:hover {
+  border-radius: 100px;
+  background-color: lightgrey;
+  font-size: 35px;
+}
+.social_contact_2 i {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 30px;
+}
+.social_contact_2 i:hover {
+  border-radius: 100px;
+  background-color: lightgrey;
+  font-size: 35px;
 }

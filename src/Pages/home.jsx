@@ -10,17 +10,17 @@ function Home() {
           <img
             src={logo}
             alt="Welcome"
-            className="img-fluid col-md-9"
+            className="img-fluid col-md-9 bg-dark"
             style={{ borderRadius: '10px', maxWidth: '100%' }}
           />
         </div>
 
         {/* Welcome Text Section */}
         <div className="col-lg-6 col-md-12 vh-80 d-flex justify-content-center align-items-center">
-          <div className="p-4">
+          <div className="p-4 box">
             <div className="typing-container">
               <h4>
-                WELCOME TO <span className="text-primary">SPECULAR DESIGN</span>
+                WELCOME TO <span className="text-primary">SPECULAR DESIGN STUDIO</span>
               </h4>
             </div>
             <hr />
@@ -38,6 +38,20 @@ function Home() {
                 Every line we draw is quiet, intentional, and built to leave a lasting impression.
               </p>
             </div>
+          </div>
+          <div className="social-icons">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <i className="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
+              <i className="bi bi-instagram text-danger" />
+            </a>
+            <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
+              <i className="bi bi-linkedin text-info" />
+            </a>
+            <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
+              <i className="bi bi-youtube text-danger" />
+            </a>
           </div>
         </div>
       </div>
