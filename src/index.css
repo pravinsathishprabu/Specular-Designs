@@ -121,7 +121,12 @@ body {
   body {
     overflow-x: hidden; /* Ensure no horizontal scrolling on mobile */
   }
-
+  .carousel-control-next-icon {
+    display: none !important;
+  }
+  .carousel-control-prev-icon{
+    display: none !important;
+  }
   .hide-on-mobile {
     display: none !important;
   }
@@ -150,7 +155,8 @@ body {
   }
 
   .project_img {
-    height: auto; /* Allow images to scale dynamically */
+    width: 100%;
+    height:50vh; /* Allow images to scale dynamically */
     margin-top: 20px; /* Add spacing for better layout */
   }
 
@@ -227,4 +233,16 @@ body {
   border-radius: 100px;
   background-color: lightgrey;
   font-size: 35px;
+}
+.service-img-l{
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 100px;
+  border:2px solid black;
+}
+.service-img-r{
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 100px;
+  border:2px solid black;
 }

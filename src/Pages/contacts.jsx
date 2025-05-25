@@ -50,12 +50,13 @@ const Contacts = () => {
     <>
       <div className="container py-4">
         <div className="row align-items-center">
-          {/* Image Section */}
-          <div className="col-lg-6 col-md-12 text-center mb-4 d-none d-md-block">
+          {/* Image Section */} 
+          <div className="col-lg-6 col-md-12 text-center mb-4">
             <DotLottieReact
               src="https://lottie.host/1628fdd1-58f7-469b-bb16-9395ed97a4ca/FFODugSrOO.json"
               loop
               autoplay
+              className='d-none d-md-block'
             />
              <div className='social_contact_2'>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
