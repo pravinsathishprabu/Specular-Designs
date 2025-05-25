@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img src={logo} alt="Logo" width="50" height="40" className="bg-light d-inline-block align-text-top" />
-          <b className="text-white p-1 mt-2 border">SPECULAR DESIGN</b>
+          <b className="text-white p-1">SPECULAR DESIGN</b>
         </a>
         <button
           className="navbar-toggler"
