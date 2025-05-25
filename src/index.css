@@ -134,6 +134,19 @@ body {
   .social-icons {
     display: none;
   }
+  .social_contact_2 i {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+.social_contact_2 i:hover {
+  border-radius: 100px;
+  background-color: lightgrey;
+  font-size: 25px;
+}
 
   .home_logo {
     height: 60vh; /* Adjusted height for smaller screens */
