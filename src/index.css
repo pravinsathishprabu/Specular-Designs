@@ -134,9 +134,7 @@ body {
   .social-icons {
     display: none;
   }
-  .social_contact_2{
-    border-bottom:1px double black;
-  }
+
   .social_contact_2 i {
   margin: 5px;
   padding: 10px;
@@ -270,4 +268,8 @@ body {
 }
 .box{
   padding: 20px;
+}
+form{
+  border-radius: 10px;
+  border:1px solid black;
 }

@@ -76,7 +76,7 @@ const Contacts = () => {
 
           {/* Form Section */}
           <div className="col-lg-6 col-md-12">
-            <form className="p-4" onSubmit={handleSubmit}>
+            <form className="p-4 bg-info" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
                 <i class="bi bi-person-fill"></i> Name
