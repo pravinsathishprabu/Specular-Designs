@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import img1 from '../assets/Projects/1.jfif';
 import img2 from '../assets/Projects/2.jfif';
 import img3 from '../assets/Projects/3.jfif';
@@ -13,9 +14,21 @@ import img12 from '../assets/Projects/12.jfif';
 import img13 from '../assets/Projects/13.jfif';
 import img14 from '../assets/Projects/14.jfif';
 import img15 from '../assets/Projects/15.jfif';
-
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { Carousel } from 'bootstrap';
 
 const Work = () => {
+
+useEffect(() => {
+  const carouselEl = document.querySelector('#carouselExample');
+  if (carouselEl) {
+    new Carousel(carouselEl, {
+      interval: 3000,
+      ride: 'carousel',
+      pause: false
+    });
+  }
+}, []);
 
   return (
     <>
