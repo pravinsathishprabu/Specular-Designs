@@ -1,5 +1,4 @@
 import {React,useState} from 'react';
-import welcome from '../assets/welcome.png';
 import emailjs from '@emailjs/browser';
 
 //import contact from '../assets/cover.jpg';
@@ -28,7 +27,6 @@ const Contacts = () => {
     return true;
   } catch (error) {
     console.error('Email send failed:', error);
-    console.log(formData);
     return false;
   }
 };
@@ -39,7 +37,7 @@ const Contacts = () => {
     e.preventDefault();
     const success = await sendEmail(formData);
     if (success) {
-      alert('Message sent!');
+      alert('Thanks for reaching us..Will connect with you soon!');
       setFormData({ name: '', email: '', mobile:'', message: '' });
     } else {
       alert('Failed to send message.');
@@ -60,23 +58,23 @@ const Contacts = () => {
             />
              <div className='social_contact_2'>
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                  <i className="bi bi-facebook"></i>
+                  <i className="bi bi-facebook shadow"></i>
                 </a>
                 <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
-                  <i className="bi bi-instagram text-danger" />
+                  <i className="bi bi-instagram text-danger shadow" />
                 </a>
                 <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
-                  <i className="bi bi-linkedin text-info" />
+                  <i className="bi bi-linkedin text-info shadow" />
                 </a>
                 <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
-                  <i className="bi bi-youtube text-danger" />
+                  <i className="bi bi-youtube text-danger shadow" />
                 </a>
             </div>
         </div>
 
           {/* Form Section */}
           <div className="col-lg-6 col-md-12">
-            <form className="p-4 bg-info" onSubmit={handleSubmit}>
+            <form className="p-4 text-dark shadow rounded" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
                 <i class="bi bi-person-fill"></i> Name
@@ -139,7 +137,7 @@ const Contacts = () => {
 
               <div className="text-center">
                 <button type="submit" className="btn btn-primary">
-                  Send Message
+                  <i class="bi bi-send-fill"/> Send
                 </button>
               </div>
 

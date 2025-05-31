@@ -31,7 +31,7 @@ const Work = () => {
                 ))}
               </div>
               <button
-                className="carousel-control-prev btn btn-primary"
+                className="carousel-control-prev"
                 type="button"
                 data-bs-target="#carouselExample"
                 data-bs-slide="prev"
@@ -65,10 +65,10 @@ const Work = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
-              ></iframe>
+              className='shadow-lg'></iframe>
             </center>
             <br />
-            <table className="table table-info table-striped">
+            <table className="table rounded shadow-lg table-striped">
               <thead>
                 <tr>
                   <th>Location</th>
@@ -88,16 +88,16 @@ const Work = () => {
         </div>
         <div className="social-icons">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-facebook"></i>
+          <i className="bi bi-facebook shadow"></i>
         </a>
         <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-instagram text-danger" />
+          <i className="bi bi-instagram shadow text-danger" />
         </a>
         <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-linkedin text-info" />
+          <i className="bi bi-linkedin shadow text-info" />
         </a>
         <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-youtube text-danger" />
+          <i className="bi bi-youtube shadow text-danger" />
         </a>
       </div>
       </div> 

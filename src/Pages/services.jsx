@@ -22,7 +22,7 @@ const Services = () => {
             <div className="row d-flex justify-content-center align-items-center">
               <h3 className='text-center'>Interior Design</h3>
               <div className="col-md-6">
-                <img src={img1} className="service-img-l d-block w-100" alt="Interior Service" />
+                <img src={img1} className="rounded shadow-lg d-block w-100" alt="Interior Service" />
               </div>
               <div className="col-md-6 text-start mt-2">
                 <p>🌟 We create spaces that are not only beautiful but also functional and tailored to your lifestyle.</p>
@@ -39,7 +39,7 @@ const Services = () => {
                 <p>🌟 Our team will work with you to create an exterior that enhances the beauty of your property and stands the test of time.</p>
               </div>
               <div className="col-md-6">
-                <img src={img2} className="service-img-r d-block w-100" alt="Exterior Service" />
+                <img src={img2} className="rounded shadow-lg d-block w-100" alt="Exterior Service" />
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ const Services = () => {
             <div className="row d-flex justify-content-center align-items-center">
               <h3 className='text-center'>Architecture Design</h3>
               <div className="col-md-6">
-                <img src={img3} className="service-img-l d-block w-100" alt="Architecture Design" />
+                <img src={img3} className="rounded shadow-lg d-block w-100" alt="Architecture Design" />
               </div>
               <div className="col-md-6 text-start mt-2">
                 <p>🌟 We provide architectural services that blend aesthetics with functionality.</p>
@@ -65,7 +65,7 @@ const Services = () => {
                 <p>🌟 Our team will work with you to create an exterior that enhances the beauty of your property and stands the test of time.</p>
               </div>
               <div className="col-md-6">
-                <img src={img4} className="service-img-r d-block w-100" alt="Urban Planning Service" />
+                <img src={img4} className="rounded shadow-lg d-block w-100" alt="Urban Planning Service" />
               </div>
             </div>
           </div>
@@ -92,16 +92,16 @@ const Services = () => {
       </div>
       <div className="social-icons">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-facebook"></i>
+          <i className="bi bi-facebook shadow"></i>
         </a>
         <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-instagram text-danger" />
+          <i className="bi bi-instagram text-danger shadow" />
         </a>
         <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-linkedin text-info" />
+          <i className="bi bi-linkedin text-info shadow" />
         </a>
         <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-youtube text-danger" />
+          <i className="bi bi-youtube text-danger shadow" />
         </a>
       </div>
       </div> 

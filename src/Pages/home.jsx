@@ -10,7 +10,7 @@ function Home() {
           <img
             src={logo}
             alt="Welcome"
-            className="img-fluid col-md-9 bg-dark"
+            className="img-fluid col-md-9 shadow-lg"
             style={{ borderRadius: '10px', maxWidth: '100%' }}
           />
         </div>
@@ -41,16 +41,16 @@ function Home() {
           </div>
           <div className="social-icons">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-facebook"></i>
+              <i className="bi bi-facebook shadow"></i>
             </a>
             <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-instagram text-danger" />
+              <i className="bi bi-instagram shadow text-danger" />
             </a>
             <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-linkedin text-info" />
+              <i className="bi bi-linkedin shadow text-info" />
             </a>
             <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
-              <i className="bi bi-youtube text-danger" />
+              <i className="bi bi-youtube shadow text-danger" />
             </a>
           </div>
         </div>

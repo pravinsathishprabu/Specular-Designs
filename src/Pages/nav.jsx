@@ -6,8 +6,8 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-info">
       <div className="container-fluid">
+        <img src={logo} alt="Logo" width="40" height="45" className="rounded bg-light d-inline-block align-text-top" />
         <a className="navbar-brand" href="#">
-          <img src={logo} alt="Logo" width="50" height="40" className="bg-light d-inline-block align-text-top" />
           <b className="text-white p-1">SPECULAR DESIGN</b>
         </a>
         <button
@@ -24,10 +24,10 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <div className="navbar-nav ms-auto">
             {/* Navigation Links */}
-            <Link to="/" className="nav-link text-white"><b>Home</b></Link>
-            <Link to="/services" className="nav-link text-white"><b>Services</b></Link>
-            <Link to="/projects" className="nav-link text-white"><b>Projects</b></Link>
-            <Link to="/contacts" className="nav-link text-white"><b>Contact</b></Link>
+            <Link to="/" className="nav-link text-white"><b><i class="bi bi-house-fill"/><span> Home</span></b></Link>
+            <Link to="/services" className="nav-link text-white"><b><i class="bi bi-briefcase-fill"/><span> Services</span></b></Link>
+            <Link to="/projects" className="nav-link text-white"><b><i class="bi bi-card-image"/><span> Projects</span></b></Link>
+            <Link to="/contacts" className="nav-link text-white"><b><i class="bi bi-envelope-fill"/><span>Contact</span></b></Link>
           </div>
         </div>
       </div>
