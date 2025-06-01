@@ -114,8 +114,8 @@ useEffect(() => {
 
       {/* Social Icons */}
       <div className="social-icons">
-        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-facebook shadow"></i>
+        <a href="https://wa.me/916381378407" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-whatsapp text-success shadow"></i>
         </a>
         <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
           <i className="bi bi-instagram shadow text-danger" />

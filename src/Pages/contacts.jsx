@@ -57,8 +57,8 @@ const Contacts = () => {
               className='d-none d-md-block'
             />
              <div className='social_contact_2'>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                  <i className="bi bi-facebook shadow"></i>
+                <a href="https://wa.me/916381378407" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-whatsapp text-success shadow"></i>
                 </a>
                 <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-instagram text-danger shadow" />
@@ -77,7 +77,7 @@ const Contacts = () => {
             <form className="p-4 text-dark shadow rounded" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="name" className="form-label">
-                <i class="bi bi-person-fill"></i> Name
+                <i className="bi bi-person-fill"></i> Name
                 </label>
                 <input
                   type="text"
@@ -92,7 +92,7 @@ const Contacts = () => {
 
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">
-                <i class="bi bi-envelope-fill"></i> Email
+                <i className="bi bi-envelope-fill"></i> Email
                 </label>
                 <input
                   type="email"
@@ -107,7 +107,7 @@ const Contacts = () => {
 
               <div className="mb-3">
                 <label htmlFor="mobile" className="form-label">
-                <i class="bi bi-phone-fill"></i> Mobile
+                <i className="bi bi-phone-fill"></i> Mobile
                 </label>
                 <input
                   type="text"
@@ -122,7 +122,7 @@ const Contacts = () => {
 
               <div className="mb-3">
                 <label htmlFor="message" className="form-label">
-                <i class="bi bi-chat-right-fill"></i> Message
+                <i className="bi bi-chat-right-fill"></i> Message
                 </label>
                 <textarea
                   className="form-control"
@@ -137,7 +137,7 @@ const Contacts = () => {
 
               <div className="text-center">
                 <button type="submit" className="btn btn-outline-primary">
-                  <i class="bi bi-send-fill"/> Send
+                  <i className="bi bi-send-fill"/> Send
                 </button>
               </div>
 
