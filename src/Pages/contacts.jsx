@@ -48,30 +48,7 @@ const Contacts = () => {
     <>
       <div className="container py-4">
         <div className="row align-items-center">
-          {/* Image Section */} 
-          <div className="col-lg-6 col-md-12 text-center mb-4">
-            <DotLottieReact
-              src="https://lottie.host/1628fdd1-58f7-469b-bb16-9395ed97a4ca/FFODugSrOO.json"
-              loop
-              autoplay
-              className='d-none d-md-block'
-            />
-             <div className='social_contact_2'>
-                <a href="https://wa.me/916381378407" target="_blank" rel="noopener noreferrer">
-                  <i class="bi bi-whatsapp text-success shadow"></i>
-                </a>
-                <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
-                  <i className="bi bi-instagram text-danger shadow" />
-                </a>
-                <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
-                  <i className="bi bi-linkedin text-info shadow" />
-                </a>
-                <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
-                  <i className="bi bi-youtube text-danger shadow" />
-                </a>
-            </div>
-        </div>
-
+          
           {/* Form Section */}
           <div className="col-lg-6 col-md-12">
             <form className="p-4 text-dark shadow rounded" onSubmit={handleSubmit}>
@@ -145,6 +122,31 @@ const Contacts = () => {
            
           
           </div>
+
+          {/* Image Section */} 
+          <div className="col-lg-6 col-md-12 text-center mb-4">
+            <DotLottieReact
+              src="https://lottie.host/1628fdd1-58f7-469b-bb16-9395ed97a4ca/FFODugSrOO.json"
+              loop
+              autoplay
+              className='d-none d-md-block'
+            />
+             <div className='social_contact_2'>
+                <a href="https://wa.me/916381378407" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-whatsapp text-success shadow"></i>
+                </a>
+                <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-instagram text-danger shadow" />
+                </a>
+                <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-linkedin text-info shadow" />
+                </a>
+                <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
+                  <i className="bi bi-youtube text-danger shadow" />
+                </a>
+            </div>
+        </div>
+
         </div>
       </div>
     </>
