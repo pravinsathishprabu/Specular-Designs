@@ -12,7 +12,7 @@ useEffect(() => {
   const carouselEl = document.querySelector('#carouselExample');
   if (carouselEl) {
     new Carousel(carouselEl, {
-      interval: 3000,
+      interval: 5000,
       ride: 'carousel',
       pause: false
     });
@@ -29,7 +29,7 @@ useEffect(() => {
         id="carouselExample"
         className="carousel slide mt-4"
         data-bs-ride="carousel"
-        data-bs-interval="3000"
+        data-bs-interval="5000"
         data-bs-pause="false"
       >
         <div className="carousel-inner">
@@ -113,18 +113,18 @@ useEffect(() => {
       </div>
 
       {/* Social Icons */}
-      <div className="social-icons mt-4 text-center">
+      <div className="social-icons">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-facebook shadow mx-2 fs-4"></i>
+          <i className="bi bi-facebook shadow"></i>
         </a>
         <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-instagram text-danger shadow mx-2 fs-4"></i>
+          <i className="bi bi-instagram shadow text-danger" />
         </a>
         <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-linkedin text-info shadow mx-2 fs-4"></i>
+          <i className="bi bi-linkedin shadow text-info" />
         </a>
         <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-youtube text-danger shadow mx-2 fs-4"></i>
+          <i className="bi bi-youtube shadow text-danger" />
         </a>
       </div>
     </div>

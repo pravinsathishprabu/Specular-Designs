@@ -7,16 +7,17 @@ import Home from './Pages/home';
 import Work from './Pages/works';
 import LoadingBar from './Pages/loadingbar';
 import { preloadImages } from './Pages/preloadImages';
+// import img from './assets/'
 
 
 const imageList = [
-  '../assets/Interior.jpg',
-  '../assets/Exterior.jpg',
-  '../assets/Architecture design.jpg',
-  '../assets/urban planning.jpg',
-  '../assets/cover.jpg',
-  '../assets/welcome.png',
-  '../assets/SPECULAR_LOGO.png',
+  './assets/Interior.jpg',
+  './assets/Exterior.jpg',
+  './assets/Architecture design.jpg',
+  './assets/urban planning.jpg',
+  './assets/cover.jpg',
+  './assets/welcome.png',
+  './assets/SPECULAR_LOGO.png',
 
   // add all images here
 ];
