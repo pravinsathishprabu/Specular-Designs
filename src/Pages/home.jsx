@@ -20,7 +20,7 @@ function Home() {
           <div className="box">
             <div className="typing-container">
               <h4>
-                WELCOME TO <span className="text-primary">SPECULAR DESIGN STUDIO</span>
+                WELCOME TO <span style={{color: '#ee6e6c'}}>SPECULAR DESIGN STUDIO</span>
               </h4>
             </div>
             <hr />
@@ -41,7 +41,7 @@ function Home() {
           </div>
           <div className="social-icons">
             <a href="https://wa.me/916381378407" target="_blank" rel="noopener noreferrer">
-              <i class="bi bi-whatsapp text-success shadow"></i>
+              <i className="bi bi-whatsapp text-success shadow"></i>
             </a>
             <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
               <i className="bi bi-instagram shadow text-danger" />

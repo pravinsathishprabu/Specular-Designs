@@ -21,8 +21,8 @@ useEffect(() => {
 
   return (
     <div className="p-2 col-md-11 mx-auto">
-      <h2 className="text-center text-info">Our Services</h2>
-      <p className="text-center">We offer a variety of services to meet your needs.</p>
+      <h2 className="text-center" style={{color: '#ee6e6c'}}>Our Services</h2>
+      <p className="text-center">We offer a variety of services to meet your needs !!!.</p>
       <hr />
 
       <div

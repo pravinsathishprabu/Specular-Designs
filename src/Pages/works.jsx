@@ -23,7 +23,7 @@ useEffect(() => {
   const carouselEl = document.querySelector('#carouselExample');
   if (carouselEl) {
     new Carousel(carouselEl, {
-      interval: 3000,
+      interval: 7000,
       ride: 'carousel',
       pause: false
     });
@@ -32,11 +32,35 @@ useEffect(() => {
 
   return (
     <>
-      <div className='projects'>
-        <div className='row p-4'>
-          <div className='col-md-6 d-flex justify-content-center'>
+      <div className='p-2 col-md-11 mx-auto'>
+      <h2 className="text-center" style={{color: '#ee6e6c'}}>Projects</h2>
+      <p className="text-center">Turning bold ideas into beautiful realities !!!.</p>
+      <hr />
+      <h3 className='text-center text-primary'>SKANDHA UPRESIDENCE MURUGAN TEMPLE</h3>
+      <center><i>-ELEVATING THE DIVINE THROUGH ARCHITECTURE</i>
+      </center><br />
+        <div className='col-md-12'>
+            <center>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/tY7yvwqxHsY?si=n7w8jeNfaGAeFS3H"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              className='youtube-frame'></iframe>
+            </center>
+            <br />
+            
+          </div>
+        </div>
+        <div className='p-2 mt-4'>
+          <div className='d-flex justify-content-center'>
             <div className="carousel slide" id="carouselExample" data-bs-ride="carousel" data-bs-interval="3000">
-              <div className="carousel-inner">
+              
+              <div className="carousel-inner shadow-lg">
                 {[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15].map((img, idx) => (
                   <div key={idx} className={`carousel-item ${idx === 0 ? 'active' : ''}`}>
                     <img src={img} className="d-block w-100 project_img" alt={`Slide ${idx + 1}`} />
@@ -62,26 +86,9 @@ useEffect(() => {
                 <span className="visually-hidden">Next</span>
               </button>
             </div>
+          
           </div>
-
-          <div className='col-md-6 mt-4'>
-            <h3 className='text-center text-primary'>SKANDHA UPRESIDENCE MURUGAN TEMPLE</h3>
-            <i className='subtext'>-ELEVATING THE DIVINE THROUGH ARCHITECTURE</i>
-            <br /><br />
-            <center>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/tY7yvwqxHsY?si=n7w8jeNfaGAeFS3H"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              className='shadow-lg'></iframe>
-            </center>
-            <br />
-            <table className="table rounded shadow-lg table-striped">
+            <table className="table w-75 mx-auto rounded shadow-lg table-striped mt-4">
               <thead>
                 <tr>
                   <th>Location</th>
@@ -97,8 +104,7 @@ useEffect(() => {
                 </tr>
               </tbody>
             </table>
-          </div>
-        </div>
+          
         <div className="social-icons">
         <a href="https://wa.me/916381378407" target="_blank" rel="noopener noreferrer">
           <i class="bi bi-whatsapp text-success shadow"></i>

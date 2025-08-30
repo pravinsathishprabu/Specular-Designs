@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Pages/nav';
 import Services from './Pages/services';
@@ -7,8 +7,6 @@ import Home from './Pages/home';
 import Work from './Pages/works';
 import LoadingBar from './Pages/loadingbar';
 import { preloadImages } from './Pages/preloadImages';
-// import img from './assets/'
-
 
 const imageList = [
   './assets/Interior.jpg',
@@ -18,29 +16,36 @@ const imageList = [
   './assets/cover.jpg',
   './assets/welcome.png',
   './assets/SPECULAR_LOGO.png',
-
   // add all images here
 ];
 
-
 function App() {
-  
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    const startTime = Date.now();
+
     preloadImages(imageList, setProgress)
-      .then(() => setLoading(false))
+      .then(() => {
+        const elapsed = Date.now() - startTime;
+        const remainingTime = Math.max(0, 10000 - elapsed); // Ensure 10s minimum
+        setTimeout(() => setLoading(false), remainingTime);
+      })
       .catch((err) => {
         console.error('Error preloading images:', err);
-        setLoading(false); // Continue even if some fail
+        // Still enforce 10s minimum load time
+        const elapsed = Date.now() - startTime;
+        const remainingTime = Math.max(0, 10000 - elapsed);
+        setTimeout(() => setLoading(false), remainingTime);
       });
   }, []);
 
   if (loading) return <LoadingBar progress={progress} />;
+
   return (
     <Router basename="/Specular-Designs">
-      <Navbar />      
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />

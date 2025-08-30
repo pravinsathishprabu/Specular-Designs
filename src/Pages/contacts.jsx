@@ -46,7 +46,10 @@ const Contacts = () => {
 
   return (
     <>
-      <div className="container py-4">
+      <div className="p-2 col-md-11 mx-auto">
+      <h2 className="text-center" style={{color: '#ee6e6c'}}>Contact</h2>
+      <p className="text-center">Transform your ideas into stunning reality !!!.</p>
+      <hr />
         <div className="row align-items-center">
           {/* Image Section */} 
           <div className="col-lg-6 col-md-12 text-center mb-4">
@@ -58,7 +61,7 @@ const Contacts = () => {
             />
              <div className='social_contact_2'>
                 <a href="https://wa.me/916381378407" target="_blank" rel="noopener noreferrer">
-                  <i class="bi bi-whatsapp text-success shadow"></i>
+                  <i className="bi bi-whatsapp text-success shadow"></i>
                 </a>
                 <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
                   <i className="bi bi-instagram text-danger shadow" />

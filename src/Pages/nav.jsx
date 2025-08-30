@@ -1,49 +1,110 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../assets/SPECULAR_LOGO.png';
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle'; // ✅ make sure bootstrap is imported
 
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const handleNavClick = (path) => (e) => {
-    e.preventDefault();
-    const navbarCollapse = document.getElementById('navbarNav');
-    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-      navbarCollapse.classList.remove('show'); // ✅ collapse
+const handleNavClick = (path) => (e) => {
+  e.preventDefault();
+
+  const offcanvasEl = document.getElementById("offcanvasNavbar");
+  if (offcanvasEl) {
+    let offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+    if (!offcanvas) {
+      offcanvas = new bootstrap.Offcanvas(offcanvasEl); // ensure it's initialized
     }
-    navigate(path); // ✅ route
-  };
+
+    // Listen for when the offcanvas is fully closed
+    offcanvasEl.addEventListener(
+      "hidden.bs.offcanvas",
+      () => {
+        const backdrop = document.querySelector(".offcanvas-backdrop");
+        if (backdrop) backdrop.remove();
+        document.body.classList.remove("offcanvas-backdrop", "offcanvas-open");
+        document.body.style.overflow = "";
+      },
+      { once: true } // run only once per close
+    );
+
+    offcanvas.hide();
+  }
+
+  navigate(path);
+};
+
+
 
   return (
-    <nav className="navbar navbar-expand-lg bg-info">
-      <div className="container-fluid">
-        <img src={logo} alt="Logo" width="40" height="45" className="rounded bg-light" />
-        <span className="navbar-brand text-white p-1"><b>SPECULAR DESIGN</b></span>
+    <>
+      {/* Header Navbar */}
+<nav className="navbar px-3 py-2" style={{ backgroundColor: 'white' }}>
+  <div className="d-flex w-100 justify-content-between align-items-center">
+    {/* Logo + Brand */}
+    <div className="d-flex align-items-center flex-shrink-1">
+      <img
+        src={logo}
+        alt="Logo"
+        width="40"
+        height="45"
+        className="rounded bg-light me-2"
+      />
+      <span className="navbar-brand text-dark fs-5 mb-0 text-truncate">
+        <b>SPECULAR DESIGN STUDIO</b>
+      </span>
+    </div>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    {/* Menu Toggle Button */}
+    <button
+      className="btn text-dark fldarkrink-0 MENU"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+    >
+      <i className="bi bi-list fs-3"></i>
+    </button>
+  </div>
+</nav>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <div className="navbar-nav ms-auto">
-            <a href="/" className="nav-link text-white" onClick={handleNavClick('/')}><i className="bi bi-house-fill me-1" /> Home</a>
-            <a href="/services" className="nav-link text-white" onClick={handleNavClick('/services')}><i className="bi bi-briefcase-fill me-1" /> Services</a>
-            <a href="/projects" className="nav-link text-white" onClick={handleNavClick('/projects')}><i className="bi bi-card-image me-1" /> Projects</a>
-            <a href="/contacts" className="nav-link text-white" onClick={handleNavClick('/contacts')}><i className="bi bi-envelope-fill me-1" /> Contact</a>
-          </div>
+      <div
+        className="offcanvas offcanvas-start"
+        tabIndex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+        style={{
+          width: '230px',
+          backgroundColor: 'white',
+        }}
+      >
+        <div className="offcanvas-header">
+          <h5 className="offcanvas-title text-danger" id="offcanvasNavbarLabel">Menu</h5>
+          <button
+            type="button"
+            className="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div className="offcanvas-body d-flex flex-column">
+          <a href="/" className="nav-link text-dark py-2" onClick={handleNavClick('/')}>
+            &nbsp;&nbsp;<i className="bi bi-house-fill me-2" /> Home
+          </a>
+          <a href="/services" className="nav-link text-dark py-2" onClick={handleNavClick('/services')}>
+            &nbsp;&nbsp;<i className="bi bi-briefcase-fill me-2" /> Services
+          </a>
+          <a href="/projects" className="nav-link text-dark py-2" onClick={handleNavClick('/projects')}>
+            &nbsp;&nbsp;<i className="bi bi-image-fill me-2" /> Projects
+          </a>
+          <a href="/contacts" className="nav-link text-dark py-2" onClick={handleNavClick('/contacts')}>
+            &nbsp;&nbsp;<i className="bi bi-envelope-fill me-2" /> Contact
+          </a>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
 
 export default Navbar;
-
