@@ -12,7 +12,7 @@ useEffect(() => {
   const carouselEl = document.querySelector('#carouselExample');
   if (carouselEl) {
     new Carousel(carouselEl, {
-      interval: 5000,
+      interval: 10000,
       ride: 'carousel',
       pause: false
     });
@@ -20,7 +20,8 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className="p-2 col-md-11 mx-auto">
+    <div>
+    <div className="p-2 col-md-10 mx-auto">
       <h2 className="text-center" style={{color: '#ee6e6c'}}>Our Services</h2>
       <p className="text-center">We offer a variety of services to meet your needs !!!.</p>
       <hr />
@@ -89,8 +90,25 @@ useEffect(() => {
             </div>
           </div>
         </div>
-
-        {/* Manual Controls */}
+      </div>
+        
+      {/* Social Icons */}
+      <div className="social-icons">
+        <a href="https://wa.me/916381378407" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-whatsapp text-success shadow"></i>
+        </a>
+        <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-instagram shadow text-danger" />
+        </a>
+        <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-linkedin shadow text-info" />
+        </a>
+        <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-youtube shadow text-danger" />
+        </a>
+      </div>
+    </div>
+          {/* Manual Controls */}
         <button
           className="carousel-control-prev"
           type="button"
@@ -110,23 +128,7 @@ useEffect(() => {
           <span className="carousel-control-next-icon" aria-hidden="true"></span>
           <span className="visually-hidden">Next</span>
         </button>
-      </div>
 
-      {/* Social Icons */}
-      <div className="social-icons">
-        <a href="https://wa.me/916381378407" target="_blank" rel="noopener noreferrer">
-            <i class="bi bi-whatsapp text-success shadow"></i>
-        </a>
-        <a href="https://www.instagram.com/specular_design_studio/?utm_source=qr&igsh=NXF1M3l4dXVxdWly#" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-instagram shadow text-danger" />
-        </a>
-        <a href="https://www.linkedin.com/in/karthi-selvam-44029a20a/" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-linkedin shadow text-info" />
-        </a>
-        <a href="https://www.youtube.com/@SpecularDesignStudio" target="_blank" rel="noopener noreferrer">
-          <i className="bi bi-youtube shadow text-danger" />
-        </a>
-      </div>
     </div>
   );
 };

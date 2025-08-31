@@ -23,7 +23,7 @@ useEffect(() => {
   const carouselEl = document.querySelector('#carouselExample');
   if (carouselEl) {
     new Carousel(carouselEl, {
-      interval: 7000,
+      interval: 10000,
       ride: 'carousel',
       pause: false
     });
@@ -32,15 +32,14 @@ useEffect(() => {
 
   return (
     <>
-      <div className='p-2 col-md-11 mx-auto'>
+      <div className='p-2 col-md-12 mx-auto'>
       <h2 className="text-center" style={{color: '#ee6e6c'}}>Projects</h2>
       <p className="text-center">Turning bold ideas into beautiful realities !!!.</p>
       <hr />
       <h3 className='text-center text-primary'>SKANDHA UPRESIDENCE MURUGAN TEMPLE</h3>
       <center><i>-ELEVATING THE DIVINE THROUGH ARCHITECTURE</i>
-      </center><br />
-        <div className='col-md-12'>
-            <center>
+      <br />
+        <div className='col-md-10'>
               <iframe
                 width="100%"
                 height="100%"
@@ -51,40 +50,31 @@ useEffect(() => {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               className='youtube-frame'></iframe>
-            </center>
             <br />
             
           </div>
+          </center>
         </div>
         <div className='p-2 mt-4'>
-          <div className='d-flex justify-content-center'>
-            <div className="carousel slide" id="carouselExample" data-bs-ride="carousel" data-bs-interval="3000">
+          <div className='d-flex justify-content-center col-md-12 mx-auto'>
+            <div className="carousel slide col-md-12" id="carouselExample" data-bs-ride="carousel" data-bs-interval="3000">
               
               <div className="carousel-inner shadow-lg">
                 {[img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13, img14, img15].map((img, idx) => (
                   <div key={idx} className={`carousel-item ${idx === 0 ? 'active' : ''}`}>
-                    <img src={img} className="d-block w-100 project_img" alt={`Slide ${idx + 1}`} />
+                    <center>
+                      <img src={img} className="d-block project_img" alt={`Slide ${idx + 1}`} />
+                    </center>
                   </div>
                 ))}
               </div>
-              <button
-                className="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExample"
-                data-bs-slide="prev"
-              >
+              
                 <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Previous</span>
-              </button>
-              <button
-                className="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExample"
-                data-bs-slide="next"
-              >
+              
                 <span className="carousel-control-next-icon" aria-hidden="true"></span>
                 <span className="visually-hidden">Next</span>
-              </button>
+              
             </div>
           
           </div>

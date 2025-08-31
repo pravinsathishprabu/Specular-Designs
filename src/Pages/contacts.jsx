@@ -139,7 +139,7 @@ const Contacts = () => {
               </div>
 
               <div className="text-center">
-                <button type="submit" className="btn btn-outline-primary">
+                <button type="submit" className="btn btn-outline-danger">
                   <i className="bi bi-send-fill"/> Send
                 </button>
               </div>
