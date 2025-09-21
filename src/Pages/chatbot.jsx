@@ -126,7 +126,7 @@ Guidelines:
       </div>
 
       {/* Input */}
-      <div className="p-2 border-top d-flex">
+      <div className="p-2 border-top d-flex chat-input">
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}

@@ -296,6 +296,40 @@ body {
   .carousel-item {
     margin-top: 15px;
   }
+    .chat-window {
+    bottom: 70px;       /* slightly above button */
+    right: 10px;        /* small margin on sides */
+    left: 10px;         /* take full width */
+    width: auto;        /* auto adjusts to available space */
+    height: 75vh;       /* use most of screen height */
+    border-radius: 10px;
+  }
+
+  .chat-messages {
+    max-height: none;   /* let flexbox + height control */
+    height: 100%;       /* take available space */
+  }
+
+  .chat-button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    bottom: 15px;
+    right: 15px;
+  }
+ .chat-header button {
+    width: auto !important;   /* shrink close button */
+    flex: 0 0 auto;           /* don’t expand */
+  }
+
+  .chat-input {
+    flex-direction: column;   /* stack input + button */
+  }
+
+  .chat-input .form-control,
+  .chat-input button {
+    width: 100%;              /* full width each */
+  }
 }
 
 /* -------- Social Contacts -------- */

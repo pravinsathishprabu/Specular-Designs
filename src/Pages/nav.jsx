@@ -63,9 +63,13 @@ const Navbar = () => {
           {/* Right: Current Page + Hamburger */}
           <div className="d-flex align-items-center gap-3">
             {/* Current Page Name */}
-            <span className="fs-5 fw-bold text-truncate" style={{color: '#ee6e6c'}}>
+            <span 
+              className="fs-5 fw-bold text-truncate d-none d-md-inline" 
+              style={{color: '#ee6e6c'}}
+            >
               {currentPage}
             </span>
+
 
             {/* Menu Toggle Button */}
             <button
