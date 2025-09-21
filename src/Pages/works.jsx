@@ -16,6 +16,7 @@ import img14 from '../assets/Projects/14.jfif';
 import img15 from '../assets/Projects/15.jfif';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Carousel } from 'bootstrap';
+import ChatWidget from './chatbot';
 
 const Work = () => {
 
@@ -33,13 +34,13 @@ useEffect(() => {
   return (
     <>
       <div className='p-2 col-md-12 mx-auto'>
-      <h2 className="text-center" style={{color: '#ee6e6c'}}>Projects</h2>
+      {/*<h2 className="text-center" style={{color: '#ee6e6c'}}>Projects</h2>
       <p className="text-center">Turning bold ideas into beautiful realities !!!.</p>
-      <hr />
-      <h3 className='text-center text-primary'>SKANDHA UPRESIDENCE MURUGAN TEMPLE</h3>
+      <hr />*/}
+      <h3 className='text-center text-primary mt-2'>SKANDHA UPRESIDENCE MURUGAN TEMPLE</h3>
       <center><i>-ELEVATING THE DIVINE THROUGH ARCHITECTURE</i>
       <br />
-        <div className='col-md-10'>
+        <div className='col-md-10 mt-4'>
               <iframe
                 width="100%"
                 height="100%"
@@ -109,6 +110,7 @@ useEffect(() => {
           <i className="bi bi-youtube shadow text-danger" />
         </a>
       </div>
+      <ChatWidget/>
       </div> 
     </>
   );

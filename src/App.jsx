@@ -6,6 +6,7 @@ import Contact from './Pages/contacts';
 import Home from './Pages/home';
 import Work from './Pages/works';
 import LoadingBar from './Pages/loadingbar';
+import ChatWidget from './Pages/chatbot';
 import { preloadImages } from './Pages/preloadImages';
 
 const imageList = [
@@ -51,6 +52,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/projects" element={<Work />} />
         <Route path="/contacts" element={<Contact />} />
+        <Route path="/chat" element={<ChatWidget />} />
       </Routes>
     </Router>
   );

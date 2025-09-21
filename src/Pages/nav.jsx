@@ -1,20 +1,27 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import logo from '../assets/SPECULAR_LOGO.png';
-import bootstrap from 'bootstrap/dist/js/bootstrap.bundle'; // ✅ make sure bootstrap is imported
+import bootstrap from 'bootstrap/dist/js/bootstrap.bundle';
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Map routes to display names
+  const pageNameMap = {
+    '/': 'Home',
+    '/services': 'Services',
+    '/projects': 'Projects',
+    '/contacts': 'Contact',
+  };
+  const currentPage = pageNameMap[location.pathname] || '';
 
   const handleNavClick = (path) => (e) => {
     e.preventDefault();
-
     const offcanvasEl = document.getElementById("offcanvasNavbar");
     if (offcanvasEl) {
       let offcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
-      if (!offcanvas) {
-        offcanvas = new bootstrap.Offcanvas(offcanvasEl); // ensure it's initialized
-      }
+      if (!offcanvas) offcanvas = new bootstrap.Offcanvas(offcanvasEl);
 
       offcanvasEl.addEventListener(
         "hidden.bs.offcanvas",
@@ -38,7 +45,8 @@ const Navbar = () => {
       {/* Header Navbar */}
       <nav className="navbar px-3 py-2" style={{ backgroundColor: 'white' }}>
         <div className="d-flex w-100 justify-content-between align-items-center">
-          {/* Logo + Brand */}
+
+          {/* Left: Logo + Brand */}
           <div className="d-flex align-items-center flex-shrink-1">
             <img
               src={logo}
@@ -52,40 +60,40 @@ const Navbar = () => {
             </span>
           </div>
 
-          {/* Menu Toggle Button */}
-          <button
-            className="btn text-dark flex-shrink-0 MENU"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-          >
-            <i className="bi bi-list fs-3"></i>
-          </button>
+          {/* Right: Current Page + Hamburger */}
+          <div className="d-flex align-items-center gap-3">
+            {/* Current Page Name */}
+            <span className="fs-5 fw-bold text-truncate" style={{color: '#ee6e6c'}}>
+              {currentPage}
+            </span>
+
+            {/* Menu Toggle Button */}
+            <button
+              className="btn text-dark flex-shrink-0 MENU"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar"
+            >
+              <i className="bi bi-list fs-3"></i>
+            </button>
+          </div>
+
         </div>
       </nav>
 
-      {/* Sidebar Offcanvas */}
+      {/* Sidebar Offcanvas (unchanged) */}
       <div
         className="offcanvas offcanvas-start"
         tabIndex="-1"
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"
-        style={{
-          width: '230px',
-          backgroundColor: 'white',
-        }}
+        style={{ width: '230px', backgroundColor: 'white' }}
       >
         <div className="offcanvas-header">
           <h5 className="offcanvas-title text-danger" id="offcanvasNavbarLabel">Menu</h5>
-          <button
-            type="button"
-            className="btn-close"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
+          <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-
         <div className="offcanvas-body d-flex flex-column">
           <a href="/" className="nav-link text-dark py-2" onClick={handleNavClick('/')}>
             &nbsp;&nbsp;<i className="bi bi-house-fill me-2" /> Home
@@ -100,7 +108,6 @@ const Navbar = () => {
             &nbsp;&nbsp;<i className="bi bi-envelope-fill me-2" /> Contact
           </a>
 
-          {/* Developer Branding Section */}
           <div className="mt-auto text-center border-top pt-3">
             <small className="text-muted d-block">Developed by</small>
             <span className="fw-bold text-dark">Pravin Sathishbrabu</span>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import logo from '../assets/SPECULAR_LOGO.png';
+import ChatWidget from './chatbot';
 
 function Home() {
   return (
@@ -53,6 +54,7 @@ function Home() {
               <i className="bi bi-youtube shadow text-danger" />
             </a>
           </div>
+          <ChatWidget/>
         </div>
       </div>
     </>

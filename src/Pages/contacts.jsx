@@ -1,5 +1,6 @@
 import {React,useState} from 'react';
 import emailjs from '@emailjs/browser';
+import ChatWidget from './chatbot';
 
 //import contact from '../assets/cover.jpg';
 
@@ -47,10 +48,10 @@ const Contacts = () => {
   return (
     <>
       <div className="p-2 col-md-11 mx-auto">
-      <h2 className="text-center" style={{color: '#ee6e6c'}}>Contact</h2>
+      {/*<h2 className="text-center" style={{color: '#ee6e6c'}}>Contact</h2>
       <p className="text-center">Transform your ideas into stunning reality !!!.</p>
-      <hr />
-        <div className="row align-items-center">
+      <hr />*/}
+        <div className="row align-items-center mt-4">
           {/* Image Section */} 
           <div className="col-lg-6 col-md-12 text-center mb-4">
             <DotLottieReact
@@ -145,10 +146,9 @@ const Contacts = () => {
               </div>
 
             </form>
-           
-          
           </div>
         </div>
+        <ChatWidget/>
       </div>
     </>
   );
