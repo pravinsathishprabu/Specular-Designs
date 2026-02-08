@@ -56,17 +56,26 @@ Guidelines:
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
-          "Authorization": `Bearer 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`, // ⚠️ Replace with real key
+          "Authorization": `Bearer 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`, // ⚠️ Replace with real key
           "Content-Type": "application/json",
+          "HTTP-Referer": "https://pravinsathishprabu.github.io/", // required
+          "X-Title": "Specular Design Studio Chatbot" 
         },
         body: JSON.stringify({
-          model: "x-ai/grok-4-fast:free",
+          model: "x-ai/grok-4.1-fast", //"x-ai/grok-4-fast:free",
           messages: newMessages,
           max_tokens: 500,
         }),
       });
-
       const data = await response.json();
+      // const blob = new Blob([JSON.stringify(data, null, 4)], {
+      //   type: "application/json",
+      // });
+
+      // const link = document.createElement("a");
+      // link.href = URL.createObjectURL(blob);
+      // link.download = "response.json";
+      // link.click();
       const reply = data.choices[0].message.content;
 
       setMessages([...newMessages, { role: "assistant", content: reply }]);
